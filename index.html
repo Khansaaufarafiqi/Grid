@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BElajar Wweb Grid</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <header class="header">
+        <div class="hero">
+          <h2 class="heading">RRacingStore</h2>
+          <p class="sub-heading">Motorcycle Type CBR</p>
+        </div>
+        <div class="fitur ft1">
+          <div class="hover">
+            <h3 class="harga">IDR 52000K</h3>
+            <p class="item">CBR 250 RED</p>
+          </div>
+        </div>
+        <div class="fitur ft2">
+          <div class="hover">
+            <h3 class="harga">IDR 52000K</h3>
+            <p class="item">CBR 250 BLACK</p>
+          </div>
+        </div>
+      </header>
+      <!-- Nav-->
+      <nav class="menu">
+        <div class="menu-toggle">
+          <input type="checkbox" />
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="produk">
+          <h3>RRascing List</h3>
+        </div>
+        <ul class="daftar">
+          <li><a href="">Home</a></li>
+          <li><a href="">Produk</a></li>
+          <li><a href="">Gallery</a></li>
+          <li><a href="">Abaut</a></li>
+        </ul>
+      </nav>
+      <section class="sukucadang">
+        <div class="part">
+          <div class="icon"><img src="/img/spion.jpg" alt="" /></div>
+          <h2>Spion Fairing Libra 2</h2>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam odio ipsa nemo repellat. Laboriosam vero corrupti autem fuga maiores quo ducimus ratione aliquid ea et, vitae ut exercitationem delectus consequuntur.</p>
+        </div>
+        <div class="part">
+          <div class="icon"><img src="/img/stang.jpg" alt="" /></div>
+          <h2>Grip Stang Tipe Road</h2>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam odio ipsa nemo repellat. Laboriosam vero corrupti autem fuga maiores quo ducimus ratione aliquid ea et, vitae ut exercitationem delectus consequuntur.</p>
+        </div>
+        <div class="part">
+          <div class="icon"><img src="/img/veleg.jpg" alt="" /></div>
+          <h2>K64 Velg Belakang</h2>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam odio ipsa nemo repellat. Laboriosam vero corrupti autem fuga maiores quo ducimus ratione aliquid ea et, vitae ut exercitationem delectus consequuntur.</p>
+        </div>
+        <div class="part">
+          <div class="icon"><img src="/img/fairing.png" alt="" /></div>
+          <h2>Fairing Depan Kedok Carbon Kabon</h2>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam odio ipsa nemo repellat. Laboriosam vero corrupti autem fuga maiores quo ducimus ratione .</p>
+        </div>
+      </section>
+      <section class="gambar">
+        <h3>Gallery</h3>
+        <img src="https://i.pinimg.com/originals/39/de/03/39de031cbcd67d591f4c2090dc6b13b2.jpg" alt="" />
+        <img src="https://i.pinimg.com/564x/27/46/d1/2746d1949f0e25ac0473878de5c44582.jpg" alt="" />
+        <img src="https://i.pinimg.com/564x/0f/49/57/0f4957145c4d27bfa2c8a479ccc77157.jpg" alt="" />
+        <img src="https://i.pinimg.com/564x/19/d1/af/19d1afdd0741057b8e94253f3e9540e1.jpg" alt="" />
+        <img src="https://i.pinimg.com/564x/a6/ac/9f/a6ac9f47b5482ea69a3ec93a65f6cf7c.jpg" alt="" />
+        <img src="https://i.pinimg.com/564x/eb/47/07/eb4707226ca3b8a91cab7b8e774af732.jpg" alt="" />
+        <img src="https://i.pinimg.com/564x/54/e9/c9/54e9c9e90e05c8814660d890f0e9d25e.jpg" alt="" />
+        <img src="https://i.pinimg.com/564x/93/b4/a4/93b4a4410824a28cc333ca20ee48fcbf.jpg" alt="" />
+        <!-- <img src="https://i.pinimg.com/564x/7e/95/56/7e95568efe1f48e0b1e8178f0d9ad997.jpg" alt="" /> -->
+      </section>
+    </div>
+    <script>
+      const menuToggle = document.querySelector(".menu-toggle input");
+      const nav = document.querySelector("nav ul ");
+
+      menuToggle.addEventListener("click", function () {
+        nav.classList.toggle("slide");
+      });
+    </script>
+  </body>
+</html>

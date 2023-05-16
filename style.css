@@ -1,0 +1,285 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: grey;
+  font-size: 18px;
+  font-family: "Shadows Into Light", cursive;
+  margin: 70px;
+}
+img {
+  width: 100%;
+  height: 100%;
+}
+/* container */
+.container {
+  display: grid;
+}
+
+/* Header */
+.header {
+  display: grid;
+  grid-template-areas:
+    "hero hero ft1"
+    "hero hero ft2";
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
+}
+.hero {
+  grid-area: hero;
+  min-height: 400px;
+  background-image: url(/img/Honda\ CBR250RR\ 2023\ Images\ -\ Check\ out\ design\ &\ styling\ _\ OTO.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 50px;
+}
+.hero h2,
+.hero p {
+  display: none;
+}
+.fitur {
+  background-color: purple;
+  color: white;
+  text-align: center;
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+}
+.fitur.ft1 {
+  grid-area: ft1;
+  background-image: url(/img/download.jpg);
+  background-size: cover;
+}
+.fitur.ft2 {
+  grid-area: ft2;
+  background-image: url(/img/CBR2.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.harga {
+  color: black;
+  font-size: 30px;
+  color: white;
+}
+.item {
+  text-decoration: underline;
+  color: black;
+}
+.sub-heading {
+  margin: 15px;
+}
+.hero .heading {
+  font-family: "Kanit", sans-serif;
+}
+/* Navbar */
+.menu {
+  order: -1;
+  margin: 10px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  margin-left: 50px;
+  text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
+}
+.menu .produk {
+  font-size: 1.27em;
+}
+.menu a {
+  display: block;
+  text-decoration: none;
+  background-color: rgb(39, 36, 36);
+  color: rgb(113, 35, 165);
+  text-align: center;
+  padding: 5px;
+  text-transform: uppercase;
+  font-size: 17px;
+}
+.menu a:hover {
+  color: white;
+}
+.menu ul {
+  display: grid;
+  /* margin-left: 50px; */
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  list-style: none;
+  gap: 5px;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  height: 25px;
+  justify-content: space-between;
+  position: relative;
+  z-index: 10;
+}
+.menu-toggle input {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 9;
+}
+.menu-toggle span {
+  display: block;
+  width: 30px;
+  height: 4px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 3px;
+  transition: all 0.5s;
+}
+
+.menu-toggle span:nth-child(2) {
+  transform-origin: 0 0;
+}
+.menu-toggle span:nth-child(4) {
+  transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2) {
+  transform: rotate(47deg);
+}
+.menu-toggle input:checked ~ span:nth-child(4) {
+  transform: rotate(-47deg);
+}
+.menu-toggle input:checked ~ span:nth-child(3) {
+  transform: scale(0);
+}
+.icon {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  letter-spacing: 1px;
+  font-size: 0.5em;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: auto;
+}
+.sukucadang {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  margin: 10px;
+  box-sizing: border-box;
+  column-gap: 10px;
+}
+.part {
+  background-color: rgb(39, 36, 36);
+  color: rgb(113, 35, 165);
+  column-gap: 20px;
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 15px;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  cursor: pointer;
+}
+.part:hover {
+  color: white;
+}
+.gambar {
+  margin-top: 100px;
+  /* width: 200px;
+  height: 200px; */
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.gambar img {
+  border-radius: 5px;
+}
+.gambar h3 {
+  grid-column: 1 / -1;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .menu {
+    order: inherit;
+    grid-template-columns: 1fr;
+    margin: 10px;
+  }
+  .menu .produk {
+    display: none;
+  }
+  .header .hero > * {
+    display: block;
+    background-color: rgb(39, 36, 36);
+    color: rgb(113, 35, 165);
+    margin: 5px;
+    margin-bottom: 5px;
+  }
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: end;
+  }
+  .sukucadang {
+    row-gap: 10px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .menu {
+    order: -1;
+    justify-items: end;
+  }
+  .menu-toggle {
+    display: flex;
+  }
+  .menu ul {
+    display: flex;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    flex-direction: column;
+    background-color: rgb(39, 36, 36);
+    text-align: center;
+    justify-content: space-evenly;
+    z-index: 9;
+    transform: translateY(-100%);
+    transition: all 1s;
+    opacity: 0;
+  }
+
+  .menu ul.slide {
+    opacity: 1;
+    display: flex;
+    transform: translateY(0);
+  }
+  .sukucadang {
+    row-gap: 10px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  body {
+    margin: 15px;
+  }
+  .sukucadang {
+    width: 90%;
+    margin: 50px auto;
+    row-gap: 10px;
+  }
+  .header {
+    display: grid;
+    grid-template-areas:
+      "hero"
+      "ft1"
+      "ft2";
+  }
+  .fitur {
+    padding-bottom: 50px;
+  }
+  .gambar {
+    margin-top: -20px;
+  }
+}
